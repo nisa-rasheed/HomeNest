@@ -1,0 +1,21 @@
+
+.product-header {
+  background-color: #174D3A !important;
+  color: #FFFFFF !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.product-header .product-logo {
+  color: #FFFFFF !important;
+}
+
+.product-header .header-icon-btn {
+  color: #FFFFFF !important;
+}
+
+.product-header .header-icon-btn svg {
+  stroke: #FFFFFF !important;
+}

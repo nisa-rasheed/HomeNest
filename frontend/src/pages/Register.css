@@ -1,0 +1,283 @@
+
+.register-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 25%, #f1e8d5 0, transparent 25%),
+    radial-gradient(circle at 85% 80%, #e7e9df 0, transparent 25%),
+    #faf7f0;
+  color: #292d29;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.register-header {
+  min-height: 55px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee6d8;
+}
+
+.brand-logo {
+  color: #174d3a;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.brand-logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-signin {
+  font-size: 12px;
+}
+
+.header-signin button,
+.register-login button {
+  border: none;
+  background: transparent;
+  color: #174d3a;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.register-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+}
+
+.register-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  border: 1px solid #eee5d7;
+  border-radius: 12px;
+  padding: 14px 28px;
+  box-shadow: 0 8px 25px rgba(50, 40, 20, 0.06);
+  text-align: center;
+}
+
+.register-icon {
+  font-size: 25px;
+  color: #174d3a;
+  font-weight: bold;
+}
+
+.register-card h1 {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #174d3a;
+  margin: 2px 0;
+}
+
+.register-card h2 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #174d3a;
+  margin: 3px 0;
+}
+
+.register-subtitle {
+  font-size: 11px;
+  color: #777;
+  margin: 3px 0 9px;
+}
+
+.google-button {
+  width: 100%;
+  height: 34px;
+  box-sizing: border-box;
+  border: 1px solid #eadfc9;
+  background: #faf7f0;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* Google logo size fix */
+.google-button .google-icon {
+  display: block;
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  min-width: 18px;
+  min-height: 18px;
+  object-fit: contain;
+  flex: 0 0 18px;
+}
+
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  color: #777;
+  margin: 9px 0;
+}
+
+.register-divider span {
+  flex: 1;
+  height: 1px;
+  background: #eee5d7;
+}
+
+.register-field {
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+.register-field label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.register-field input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #eadfc9;
+  border-radius: 7px;
+  background: #faf7f0;
+  padding: 0 10px;
+  font-size: 11px;
+  outline: none;
+}
+
+.register-field input:focus {
+  border-color: #174d3a;
+}
+
+.register-field input::placeholder {
+  color: #999;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 38px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #174d3a;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.register-submit {
+  width: 100%;
+  height: 37px;
+  border: none;
+  border-radius: 7px;
+  background: #174d3a;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 3px;
+  box-shadow: 0 3px 7px rgba(23, 77, 58, 0.2);
+}
+
+.register-submit:hover {
+  background: #103c2c;
+}
+
+.register-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register-login {
+  font-size: 11px;
+  margin: 9px 0 0;
+}
+
+.register-success,
+.register-error {
+  font-size: 11px;
+  margin: 6px 0;
+}
+
+.register-success {
+  color: #174d3a;
+}
+
+.register-error {
+  color: #c0392b;
+}
+
+.register-footer {
+  min-height: 35px;
+  padding: 7px 6%;
+  border-top: 1px solid #eee5d7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 9px;
+}
+
+.register-footer div {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 600px) {
+  .register-header {
+    padding: 0 15px;
+  }
+
+  .register-main {
+    padding: 8px 15px;
+  }
+
+  .register-card {
+    max-width: 380px;
+    padding: 14px 20px;
+  }
+
+  .register-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .register-footer div {
+    gap: 12px;
+  }
+}

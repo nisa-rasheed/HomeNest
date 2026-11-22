@@ -1,0 +1,136 @@
+
+.payment-failed-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #faf7f0;
+}
+
+.payment-failed-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 32px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #eee8dc;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.payment-failed-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #fff0ee;
+  color: #c0392b;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.payment-failed-card h1 {
+  margin: 0 0 12px;
+  color: #292d29;
+  font-size: 28px;
+}
+
+.payment-failed-message {
+  margin: 0 0 26px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.payment-failed-details {
+  padding: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+  background: #faf7f0;
+  border-radius: 10px;
+}
+
+.payment-failed-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9e2d6;
+}
+
+.payment-failed-details div:last-child {
+  border-bottom: none;
+}
+
+.payment-failed-details span {
+  color: #777;
+  font-size: 13px;
+}
+
+.payment-failed-details strong {
+  color: #292d29;
+  font-size: 13px;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.payment-failed-details .failed-status {
+  color: #c0392b;
+}
+
+.payment-failed-note {
+  margin: 0 0 24px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.payment-retry-button,
+.payment-orders-button {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.payment-retry-button {
+  margin-bottom: 12px;
+  border: 1px solid #174d3a;
+  background: #174d3a;
+  color: #fff;
+}
+
+.payment-retry-button:hover {
+  background: #103b2c;
+}
+
+.payment-orders-button {
+  border: 1px solid #174d3a;
+  background: #fff;
+  color: #174d3a;
+}
+
+.payment-orders-button:hover {
+  background: #f2f6f3;
+}
+
+@media (max-width: 480px) {
+  .payment-failed-page {
+    padding: 24px 14px;
+  }
+
+  .payment-failed-card {
+    padding: 30px 20px;
+  }
+
+  .payment-failed-card h1 {
+    font-size: 24px;
+  }
+}

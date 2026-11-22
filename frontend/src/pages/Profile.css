@@ -1,0 +1,393 @@
+
+/* Main Page */
+.profile-page {
+  min-height: 100vh;
+  background: #FAF7F0;
+  color: #292D29;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.profile-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 15px auto;
+  padding: 0 15px 20px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.profile-heading {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.profile-heading p {
+  color: #A58B52;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.profile-heading h1 {
+  color: #174D3A;
+  font-size: 23px;
+  margin: 7px 0;
+}
+
+.profile-heading span {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #FFFFFF;
+  padding: 18px 22px;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+/* Profile Photo Section */
+.profile-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Profile Photo Wrapper */
+.profile-photo-wrapper {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+}
+
+/* Profile Photo */
+.profile-photo {
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+  min-height: 75px;
+  border-radius: 50%;
+  background: #E8EEE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #174D3A;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* WhatsApp Style Camera Icon */
+.profile-camera-btn {
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #174D3A;
+  color: #D6B879;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.profile-camera-btn svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.profile-camera-btn:hover {
+  background: #D6B879;
+  color: #174D3A;
+  transform: scale(1.08);
+}
+
+/* Remove Photo Text */
+.remove-profile-photo-text {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  color: #A33A32;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-profile-photo-text:hover {
+  background: transparent;
+  color: #7D211B;
+  text-decoration: underline;
+}
+
+.remove-profile-photo-text:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Profile Options */
+.profile-options {
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  margin-bottom: 15px;
+}
+
+.profile-option {
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  color: #292D29;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.profile-option:last-child {
+  border-bottom: none;
+}
+
+.profile-option:hover {
+  color: #174D3A;
+}
+
+.profile-option span:last-child {
+  color: #A58B52;
+  font-size: 17px;
+}
+
+/* Form Fields */
+.profile-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #292D29;
+}
+
+.profile-field input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #DEDED8;
+  border-radius: 5px;
+  outline: none;
+  background: #FFFFFF;
+  color: #292D29;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.profile-field input:focus {
+  border-color: #174D3A;
+}
+
+.profile-field input:read-only {
+  background: #F5F5F2;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.profile-success {
+  color: #187443;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.profile-error {
+  color: #C0392B;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Save Button */
+.save-profile-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: #174D3A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.save-profile-btn:hover {
+  background: #103B2C;
+}
+
+.save-profile-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Continue Shopping */
+.continue-shopping-btn {
+  display: block;
+  margin: 12px auto 0;
+  padding: 9px 18px;
+  background: transparent;
+  color: #174D3A;
+  border: 1px solid #174D3A;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.continue-shopping-btn:hover {
+  background: #174D3A;
+  color: #FFFFFF;
+}
+
+/* Loading */
+.profile-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #174D3A;
+  font-size: 14px;
+}
+
+/* Common Customer Header */
+.profile-page .product-header {
+  width: 100%;
+  min-height: 76px;
+  padding: 14px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FAF7F0;
+  border-bottom: 1px solid rgba(23, 77, 58, 0.12);
+  box-sizing: border-box;
+}
+
+.profile-page .product-logo {
+  color: #174D3A;
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-page .product-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-page .header-icon-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D6B879;
+  border-radius: 50%;
+  background: #FAF7F0;
+  color: #174D3A;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.profile-page .header-icon-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.profile-page .header-icon-btn:hover {
+  background: #174D3A;
+  color: #D6B879;
+  border-color: #174D3A;
+}
+
+.profile-page .icon-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #D6B879;
+  color: #174D3A;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 0 15px 20px;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .profile-page .product-header {
+    padding: 13px 5%;
+  }
+
+  .profile-page .product-logo {
+    font-size: 23px;
+  }
+
+  .profile-page .product-header-actions {
+    gap: 9px;
+  }
+
+  .profile-page .header-icon-btn {
+    width: 39px;
+    height: 39px;
+  }
+}

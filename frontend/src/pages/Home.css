@@ -1,0 +1,1003 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.home-page {
+  background: #FAF7F0;
+  color: #292D29;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Announcement */
+
+.top-announcement {
+  background: #174D3A;
+  color: #FAF7F0;
+  text-align: center;
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Header */
+
+.home-header {
+  min-height: 68px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FAF7F0;
+  border-bottom: 1px solid #e9e2d5;
+  position: relative;
+  z-index: 10;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #174D3A;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.home-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.home-nav a {
+  color: #292D29;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.home-nav a:hover {
+  color: #174D3A;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-actions button,
+.mobile-menu-button {
+  background: transparent;
+  border: none;
+  color: #174D3A;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+.header-actions button:hover {
+  color: #B28A3B;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+.header-actions .logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #174D3A;
+  color: #FAF7F0;
+  padding: 11px 17px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header-actions .logout-button:hover {
+  background: #D6B879;
+  color: #174D3A;
+}
+
+/* Cart and Wishlist Counts */
+
+.home-cart-button,
+.home-wishlist-button {
+  position: relative;
+}
+
+.home-cart-count,
+.home-wishlist-count {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: #174D3A;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Section */
+
+.hero-section {
+  min-height: 410px;
+  display: flex;
+  align-items: center;
+  padding: 40px 7%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250,247,240,0.97) 0%,
+      rgba(250,247,240,0.87) 42%,
+      rgba(250,247,240,0.08) 100%
+    ),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero-subtitle,
+.section-heading > p,
+.about-section > p:first-child {
+  color: #A78342;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  color: #174D3A;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.hero-content h1 span {
+  color: #B28A3B;
+  font-style: italic;
+}
+
+.hero-description {
+  color: #174D3A;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.8;
+  max-width: 470px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+.shopping-button {
+  margin-top: 16px;
+  background: #174D3A;
+  color: white;
+  border: 1px solid #174D3A;
+  padding: 12px 19px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.shopping-button:hover {
+  background: #D6B879;
+  border-color: #D6B879;
+  color: #174D3A;
+}
+
+/* Offers Section */
+
+.offers-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px 5%;
+}
+
+.coupons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.coupon-offer,
+.shipping-offer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 14px;
+  min-height: 145px;
+}
+
+.coupon-offer {
+  width: 100%;
+  min-width: 0;
+  background: #E8EBD9;
+  color: #174D3A;
+  border: 1px solid #D6B879;
+}
+
+.shipping-offer {
+  background: #F5E2C7;
+  color: #174D3A;
+  border: 1px solid #D6B879;
+}
+
+.coupon-offer > svg,
+.shipping-offer > svg {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.coupon-offer h2,
+.shipping-offer h2 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin: 0 0 8px;
+}
+
+.coupon-offer p,
+.shipping-offer p {
+  font-size: 14px;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.coupon-offer strong {
+  display: inline-block;
+  background: #D6B879;
+  color: #292D29;
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.coupon-offer small,
+.shipping-offer small {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #555B54;
+}
+
+.coupon-message {
+  background: #E8EBD9;
+  color: #174D3A;
+  border: 1px solid #D6B879;
+  border-radius: 14px;
+  min-height: 120px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Features Section */
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding: 25px 5%;
+  background: #ffffff;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.feature-item > svg {
+  color: #B28A3B;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+}
+
+.feature-item h3 {
+  color: #174D3A;
+  font-size: 14px;
+  margin: 0 0 5px;
+}
+
+.feature-item p {
+  color: #777;
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Search Bar */
+
+.home-search-panel {
+  width: 100%;
+  padding: 22px 7%;
+  background: #FAF7F0;
+  border-bottom: 1px solid #e9e2d5;
+  box-shadow: 0 5px 15px rgba(23, 77, 58, 0.08);
+  animation: searchAppear 0.2s ease;
+}
+
+.home-search-inner {
+  max-width: 1000px;
+  width: 100%;
+  height: 58px;
+  margin: auto;
+  padding: 8px 12px 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  border: 1px solid #D6B879;
+  border-radius: 9px;
+}
+
+.home-search-inner > svg {
+  color: #174D3A;
+  flex-shrink: 0;
+}
+
+.home-search-inner input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #292D29;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.home-search-inner input::placeholder {
+  color: #99968d;
+}
+
+.home-search-inner button {
+  height: 42px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 6px;
+  background: #174D3A;
+  color: #FAF7F0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.home-search-inner button:hover {
+  background: #D6B879;
+  color: #174D3A;
+}
+
+@keyframes searchAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Headings */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-heading h2,
+.about-section h2 {
+  font-family: Georgia, serif;
+  color: #174D3A;
+  font-size: clamp(27px, 4vw, 38px);
+  margin: 12px 0;
+}
+
+.section-heading > span {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Categories Section */
+
+.categories-section {
+  padding: 48px 5%;
+  background: #FAF7F0;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.category-card {
+  background: #ffffff;
+  border: 1px solid #eee8dc;
+  border-radius: 13px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(23, 77, 58, 0.13);
+}
+
+.category-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card-title {
+  min-height: 58px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #174D3A;
+  color: #FAF7F0;
+}
+
+.category-card-title h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.category-card-title svg {
+  color: #D6B879;
+  flex-shrink: 0;
+}
+
+.category-image-placeholder {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E8EBD9;
+  color: #174D3A;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.category-message {
+  text-align: center;
+  color: #777;
+  padding: 30px 10px;
+  font-size: 14px;
+}
+
+/* Rooms Section */
+
+.rooms-section {
+  padding: 48px 5%;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.room-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #eee8dc;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(23, 77, 58, 0.12);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.room-card:hover img {
+  transform: scale(1.04);
+}
+
+.room-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #174D3A;
+  color: #FAF7F0;
+}
+
+.room-card-title h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.room-card-title svg {
+  color: #D6B879;
+}
+
+/* About Section */
+
+.about-section {
+  text-align: center;
+  padding: 45px 6%;
+  background: #F0EBDD;
+}
+
+.about-section > p:last-child {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: #62665E;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+/* Footer */
+
+.home-footer {
+  background: #174D3A;
+  color: #FAF7F0;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.home-footer .brand-logo {
+  color: #D6B879;
+  justify-content: center;
+}
+
+.home-footer p {
+  font-size: 13px;
+  color: #e3e0d6;
+  margin: 8px 0;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .home-nav {
+    gap: 16px;
+  }
+
+  .header-actions {
+    gap: 7px;
+  }
+
+  .room-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .category-card img,
+  .category-image-placeholder {
+    height: 170px;
+  }
+
+  .features-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .home-header {
+    padding: 15px 5%;
+  }
+
+  .brand-logo {
+    font-size: 21px;
+  }
+
+  .home-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #FAF7F0;
+    flex-direction: column;
+    padding: 20px 6%;
+    border-top: 1px solid #e9e2d5;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  }
+
+  .home-nav.nav-open {
+    display: flex;
+  }
+
+  .header-actions {
+    gap: 3px;
+  }
+
+  .header-actions button {
+    padding: 4px;
+  }
+
+  .header-actions button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header-actions .logout-button {
+    padding: 7px;
+  }
+
+  .header-actions .logout-button span {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .hero-section {
+    min-height: 350px;
+    padding: 30px 6%;
+    background-position: 60% center;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  /* Mobile Offers */
+
+  .offers-section {
+    grid-template-columns: 1fr;
+    padding: 20px 5%;
+    gap: 12px;
+  }
+
+  .coupons-container {
+    gap: 12px;
+  }
+
+  .coupon-offer,
+  .shipping-offer {
+    padding: 18px;
+    gap: 14px;
+    min-height: 120px;
+  }
+
+  .coupon-offer h2,
+  .shipping-offer h2 {
+    font-size: 21px;
+  }
+
+  .coupon-offer p,
+  .shipping-offer p {
+    font-size: 13px;
+  }
+
+  .coupon-offer small,
+  .shipping-offer small {
+    font-size: 10px;
+  }
+
+  .coupon-message {
+    min-height: 100px;
+    padding: 18px;
+    font-size: 13px;
+  }
+
+  /* Mobile Features */
+
+  .features-section {
+    grid-template-columns: 1fr;
+    padding: 22px 6%;
+    gap: 18px;
+  }
+
+  .feature-item {
+    justify-content: flex-start;
+  }
+
+  .feature-item h3 {
+    font-size: 14px;
+  }
+
+  .feature-item p {
+    font-size: 12px;
+  }
+
+  /* Mobile Search */
+
+  .home-search-panel {
+    padding: 14px 5%;
+  }
+
+  .home-search-inner {
+    height: 50px;
+    gap: 9px;
+    padding-left: 12px;
+  }
+
+  .home-search-inner input {
+    font-size: 13px;
+  }
+
+  .home-search-inner button {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 12px;
+  }
+
+  /* Mobile Categories */
+
+  .categories-section {
+    padding: 38px 5%;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-card img,
+  .category-image-placeholder {
+    height: 135px;
+  }
+
+  .category-card-title {
+    min-height: 50px;
+    padding: 10px;
+  }
+
+  .category-card-title h3 {
+    font-size: 12px;
+  }
+
+  /* Mobile Rooms */
+
+  .rooms-section {
+    padding: 38px 5%;
+  }
+
+  .room-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .room-card img {
+    height: 140px;
+  }
+
+  .room-card-title {
+    padding: 12px;
+  }
+
+  .room-card-title h3 {
+    font-size: 13px;
+  }
+
+  /* Mobile About */
+
+  .about-section {
+    padding: 35px 6%;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+  .header-actions {
+    gap: 0;
+  }
+
+  .header-actions button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .room-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card img,
+  .category-image-placeholder {
+    height: 190px;
+  }
+}
+
+/* =================================
+   HOMENEST OFFERS AND FEATURES
+================================= */
+
+.offers-section {
+  display: block;
+  padding: 40px 6%;
+  background: #FAF7F0;
+}
+
+.offers-heading,
+.features-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.offers-heading p,
+.features-heading p {
+  color: #A78342;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+}
+
+.offers-heading h2,
+.features-heading h2 {
+  color: #174D3A;
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 3vw, 34px);
+  margin: 0;
+}
+
+.coupons-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.coupons-container .coupon-offer {
+  width: 100%;
+  min-width: 0;
+  min-height: 125px;
+}
+
+.coupon-message {
+  grid-column: 1 / -1;
+  background: #E8EBD9;
+  color: #174D3A;
+  border: 1px solid #D6B879;
+  border-radius: 14px;
+  min-height: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Features section */
+
+.features-section {
+  display: block;
+  padding: 40px 6%;
+  background: #FFFFFF;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.features-grid .feature-item {
+  justify-content: flex-start;
+  padding: 18px;
+  background: #FAF7F0;
+  border: 1px solid #E9E2D5;
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.features-grid .feature-item > svg {
+  flex-shrink: 0;
+  color: #B28A3B;
+  width: 28px;
+  height: 28px;
+}
+
+.features-grid .feature-item h3 {
+  color: #174D3A;
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.features-grid .feature-item p {
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .offers-section,
+  .features-section {
+    padding: 30px 5%;
+  }
+
+  .coupons-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .coupons-container .coupon-offer {
+    min-height: 110px;
+    padding: 17px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .features-grid .feature-item {
+    padding: 15px;
+  }
+}
+.home-page .hero-section .hero-content p.hero-description {
+  color: #A78342 !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}

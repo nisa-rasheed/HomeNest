@@ -1,0 +1,415 @@
+
+.address-page {
+  min-height: 100vh;
+  background: #FAF7F0;
+  color: #292D29;
+  font-family: Arial, sans-serif;
+}
+
+.address-header {
+  height: 65px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #174D3A;
+}
+
+.address-logo {
+  color: #D6B879;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.address-back-btn {
+  border: 1px solid #D6B879;
+  background: transparent;
+  color: #FAF7F0;
+  padding: 9px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.address-container {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 0 18px;
+}
+
+.address-heading {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.address-heading p {
+  color: #A68A4F;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+
+.address-heading h1 {
+  color: #174D3A;
+  font-size: 27px;
+  margin: 0 0 6px;
+}
+
+.address-heading span {
+  color: #777;
+  font-size: 13px;
+}
+
+.add-address-btn,
+.save-address-btn {
+  background: #174D3A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 18px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.add-address-btn {
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.address-form,
+.address-card {
+  background: white;
+  border: 1px solid #E8E1D2;
+  border-radius: 9px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.address-form h2 {
+  color: #174D3A;
+  font-size: 18px;
+  margin: 0 0 17px;
+}
+
+.address-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.address-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.address-field label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.address-field input,
+.address-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #DCD8CF;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  background: #FFFEFC;
+}
+
+.address-field input:focus,
+.address-field textarea:focus {
+  border-color: #174D3A;
+}
+
+.address-field textarea {
+  min-height: 75px;
+  resize: vertical;
+}
+
+.address-full-width {
+  grid-column: 1 / -1;
+}
+
+.default-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.default-checkbox input {
+  accent-color: #174D3A;
+}
+
+.address-form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-address-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-address-btn {
+  background: #EEEAE1;
+  color: #292D29;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 18px;
+  cursor: pointer;
+}
+
+.address-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.address-card-heading h3 {
+  color: #174D3A;
+  font-size: 16px;
+  margin: 0;
+}
+
+.default-badge {
+  background: #F3EBD8;
+  color: #80652E;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.address-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 5px 0;
+  color: #555;
+}
+
+.address-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.address-card-actions button {
+  background: transparent;
+  border: 1px solid #174D3A;
+  color: #174D3A;
+  padding: 7px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.address-card-actions button:hover,
+.address-back-btn:hover {
+  background: #D6B879;
+  color: #174D3A;
+}
+
+.address-card-actions .delete-address-btn {
+  border-color: #B3261E;
+  color: #B3261E;
+}
+
+.address-card-actions .delete-address-btn:hover {
+  background: #B3261E;
+  color: white;
+}
+
+.no-address {
+  text-align: center;
+  background: white;
+  border-radius: 7px;
+  padding: 25px 12px;
+  color: #777;
+  font-size: 13px;
+}
+
+.address-success,
+.address-error {
+  text-align: center;
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+.address-success {
+  color: #174D3A;
+}
+
+.address-error {
+  color: #B3261E;
+}
+
+.address-loading {
+  text-align: center;
+  padding: 50px;
+  color: #174D3A;
+}
+
+.continue-address-btn {
+  display: block;
+  margin: 22px auto;
+  background: #D6B879;
+  color: #174D3A;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Delete confirmation popup */
+
+.delete-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.delete-popup {
+  width: 100%;
+  max-width: 380px;
+  background: #FAF7F0;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: popup-appear 0.2s ease-out;
+}
+
+.delete-popup-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8E5E3;
+  color: #B3261E;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.delete-popup h2 {
+  color: #174D3A;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.delete-popup p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 22px;
+}
+
+.delete-popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.delete-cancel-btn,
+.delete-confirm-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 11px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-cancel-btn {
+  background: #EEEAE1;
+  color: #292D29;
+}
+
+.delete-confirm-btn {
+  background: #B3261E;
+  color: white;
+}
+
+.delete-cancel-btn:hover {
+  background: #DDD7CA;
+}
+
+.delete-confirm-btn:hover {
+  background: #921D17;
+}
+
+.delete-cancel-btn:disabled,
+.delete-confirm-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes popup-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 550px) {
+  .address-header {
+    padding: 0 16px;
+  }
+
+  .address-container {
+    margin-top: 20px;
+  }
+
+  .address-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .address-full-width {
+    grid-column: auto;
+  }
+
+  .address-form {
+    padding: 15px;
+  }
+
+  .address-card-actions {
+    gap: 7px;
+  }
+
+  .delete-popup {
+    padding: 24px 18px;
+  }
+
+  .delete-popup-actions {
+    flex-direction: column-reverse;
+  }
+
+  .delete-cancel-btn,
+  .delete-confirm-btn {
+    width: 100%;
+  }
+}
