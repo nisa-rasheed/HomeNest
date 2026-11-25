@@ -1,12 +1,15 @@
 
 import axios from "axios";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 const axiosInstance = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: API_BASE_URL,
 });
 
 const refreshClient = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: API_BASE_URL,
 });
 
 // Attach the current tab's access token
@@ -56,9 +59,7 @@ axiosInstance.interceptors.response.use(
       try {
         const response = await refreshClient.post(
           "/token/refresh/",
-          {
-            refresh: refreshToken,
-          }
+          { refresh: refreshToken }
         );
 
         const newAccessToken = response.data.access;
