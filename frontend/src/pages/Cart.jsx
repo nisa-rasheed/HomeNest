@@ -47,6 +47,16 @@ function Cart({ refreshCartCount }) {
   }, []);
 
   const items = cart?.items || [];
+  useEffect(() => {
+  console.log(
+    "CART ORDER:",
+    items.map((item) => ({
+      id: item.id,
+      name: item.product_name,
+      quantity: item.quantity,
+    }))
+  );
+}, [items]);
 
   // SELECT / DESELECT SINGLE PRODUCT
   const toggleItemSelection = (itemId) => {
@@ -120,43 +130,61 @@ function Cart({ refreshCartCount }) {
       : `http://127.0.0.1:8000${image}`;
   };
 
-  // UPDATE QUANTITY
-  const updateQuantity = async (item, newQuantity) => {
-    if (newQuantity < 1) return;
+  
+ 
+const updateQuantity = async (item, newQuantity) => {
+  if (newQuantity < 1) return;
 
-    try {
-      setUpdatingItem(item.id);
-      setError("");
+  try {
+    setUpdatingItem(item.id);
+    setError("");
 
-      const response = await axiosInstance.patch(
-        `/api/cart/update/${item.id}/`,
-        { quantity: newQuantity }
-      );
+    const response = await axiosInstance.patch(
+      `/api/cart/update/${item.id}/`,
+      { quantity: newQuantity }
+    );
 
-      const updatedCart = response.data.cart;
-      setCart(updatedCart);
-    } catch (err) {
-      console.error("Quantity update error:", err);
+    const updatedCart = response.data.cart;
+    console.log("UPDATED CART:", updatedCart.items.map(item => ({
+  id: item.id,
+  name: item.product_name,
+  quantity: item.quantity
+})));
 
-      setError(
-        err.response?.data?.message ||
-        err.response?.data?.detail ||
-        "Unable to update quantity."
-      );
-    } finally {
-      setUpdatingItem(null);
-    }
+    setCart((previousCart) => {
+  if (!previousCart) return updatedCart;
+
+  return {
+    ...previousCart,
+    ...updatedCart,
+    items: updatedCart.items,
   };
+});
 
-  // REMOVE PRODUCT
+await refreshCartCount();
+
+  } catch (err) {
+    console.error("Quantity update error:", err);
+
+    setError(
+      err.response?.data?.message ||
+      err.response?.data?.detail ||
+      err.message ||
+      "Unable to update quantity."
+    );
+  } finally {
+    setUpdatingItem(null);
+  }
+};
+
+
+    // REMOVE PRODUCT
   const removeItem = async (itemId) => {
     try {
       setUpdatingItem(itemId);
       setError("");
 
-      await axiosInstance.delete(
-        `/api/cart/remove/${itemId}/`
-      );
+      await axiosInstance.delete(`/api/cart/remove/${itemId}/`);
 
       setSelectedItemIds((previous) =>
         previous.filter((id) => id !== itemId)
@@ -164,6 +192,7 @@ function Cart({ refreshCartCount }) {
 
       await fetchCart(false);
       await refreshCartCount();
+
     } catch (err) {
       console.error("Remove cart item error:", err);
 
@@ -175,7 +204,7 @@ function Cart({ refreshCartCount }) {
       setUpdatingItem(null);
     }
   };
-
+  
   // PROCEED TO CHECKOUT
   const handleCheckout = () => {
     if (selectedItems.length === 0) {

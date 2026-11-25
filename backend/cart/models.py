@@ -36,6 +36,8 @@ class CartItem(models.Model):
     added_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        ordering = ["added_at", "id"]
+
         constraints = [
             models.UniqueConstraint(
                 fields=["cart", "variant"],

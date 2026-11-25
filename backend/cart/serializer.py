@@ -99,7 +99,15 @@ class AddToCartSerializer(serializers.Serializer):
 
 # CART RESPONSE
 class CartSerializer(serializers.ModelSerializer):
-    items = CartItemSerializer(many=True, read_only=True)
+    items = serializers.SerializerMethodField()
+
+    def get_items(self, obj):
+        cart_items = obj.items.all().order_by("added_at", "id")
+        return CartItemSerializer(
+            cart_items,
+            many=True,
+            context=self.context
+        ).data
 
     class Meta:
         model = Cart
