@@ -97,11 +97,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'homenest_db',
-        'USER': 'postgres',
-        'PASSWORD':  os.environ.get('DB_PASSWORD'),
+        'NAME': os.environ.get('DB_NAME', 'homenest_db'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': '5432',
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
 
@@ -169,10 +169,13 @@ REST_FRAMEWORK = {
 }
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://homenest-frontend-6tty.onrender.com",
 ]
+
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://homenest-frontend-6tty.onrender.com",
 ]
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID")
 MEDIA_URL = '/media/'
